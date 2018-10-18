@@ -3,7 +3,7 @@
 class Finder {
     static energies(room) {
         let result = _.filter(room.find(FIND_DROPPED_RESOURCES), function(r) {
-            return r.amount >= Config.minEnergy[room.level()] && r.resourceType === RESOURCE_ENERGY
+            return r.resourceType === RESOURCE_ENERGY
         })
         if (result.length > 0) return result
         result = _.filter(room.find(FIND_STRUCTURES), e => {return e.structureType == STRUCTURE_CONTAINER && e.store[RESOURCE_ENERGY] > Config.minEnergy[room.level()]})
