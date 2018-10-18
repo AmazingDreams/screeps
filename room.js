@@ -13,5 +13,5 @@ Room.prototype.needMiners = function () {
     return Finder.findMyCreepsByTask(this, 'miner').length < this.find(FIND_SOURCES).length
 }
 Room.prototype.needHaulers = function () {
-    return Finder.findMyCreepsByTask(this, 'hauler').length < Finder.findMyCreepsByTaks(this, 'miner')
+    return Finder.findMyCreepsByTask(this, 'hauler').length < Finder.findMyCreepsByTask(this, 'miner')
 }
