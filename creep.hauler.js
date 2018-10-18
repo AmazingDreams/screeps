@@ -16,7 +16,7 @@ Creep.prototype.haulerTick = function () {
 }
 Creep.prototype.haul = function () {
     if (!this.hasTarget('dest')) {
-        this.setTarget('dest', Targeting.energyDump(this.room)))
+        this.setTarget('dest', Targeting.energyDump(this.room))
     }
 
     this.dump(this.getTarget('dest'))
