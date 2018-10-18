@@ -8,6 +8,7 @@ Creep.prototype.minerTick = function () {
     }
 
     const target = this.getTarget('source')
+    console.log(target)
     if (target) {
         this.work(this.harvest, target, 1)
     } else {
