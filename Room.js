@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function (room) {
+Room.prototype.tick = function () {
     console.log('room.tick');
 }
