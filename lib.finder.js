@@ -6,7 +6,7 @@ class Finder {
             return r.resourceType === RESOURCE_ENERGY
         })
         if (result.length > 0) return result
-        result = _.filter(room.find(FIND_STRUCTURES), e => {return e.structureType == STRUCTURE_CONTAINER && e.store[RESOURCE_ENERGY] > Config.minEnergy[room.level()]})
+        result = _.filter(room.find(FIND_STRUCTURES), e => {return e.structureType == STRUCTURE_CONTAINER && e.store[RESOURCE_ENERGY] > 0)
         if (result.length > 0) return result
         result = _.filter(room.find(FIND_STRUCTURES), e => {return e.structureType == STRUCTURE_STORAGE && e.store[RESOURCE_ENERGY] > 0})
         if (result.length > 0) return result
