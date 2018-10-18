@@ -7,6 +7,12 @@ class Finder {
         }));
     }
 
+    static findMyCreepsByTask(room, task) {
+        return _.filter(room.find(FIND_MY_CREEPS), function (c) {
+            return c.task() === task
+        })
+    }
+
     static findUnoccupiedSource(room) {
         return _.first(room.find(FIND_SOURCES))
     }
