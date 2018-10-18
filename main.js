@@ -3,7 +3,7 @@
 require('Room');
 
 module.exports.loop = function () {
-    _.forEach(Memory.rooms, function (r) {
+    _.forEach(Game.rooms, function (r) {
         r.tick()
     })
 }
