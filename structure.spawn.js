@@ -16,5 +16,5 @@ StructureSpawn.prototype.spawnMiner = function () {
     this.spawnACreep('miner', [MOVE, CARRY, WORK])
 }
 StructureSpawn.prototype.spawnHauler = function () {
-    this.spawnACreep('hauler', [MOVE, MOVE, CARRY, CARRY])
+    this.spawnACreep('hauler', [MOVE, CARRY])
 }
