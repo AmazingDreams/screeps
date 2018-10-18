@@ -1,5 +1,7 @@
 'use strict'
 
+const Finder = require('lib.finder')
+
 class Targeting {
     static unclaimedEnergy(room) {
         let energies = Finder.energies(room)
