@@ -1,5 +1,10 @@
 'use strict';
 
+const _ = require('lodash');
+const Room = require('Room');
+
 module.exports.loop = function () {
-  console.log('test');
+    Memory.rooms.forEach(function (r) {
+        Room(r);
+    })
 }
