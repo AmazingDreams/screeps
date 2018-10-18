@@ -19,10 +19,10 @@ Creep.prototype.haul = function () {
         this.setTarget('dest', Targeting.energyDump(this.room))
     }
 
-    this.dump(this.getTarget('dest'))
+    this.dump()
 }
 Creep.prototype.dump = function () {
-    let value = this.work(this.transfer, target, [RESOURCE_ENERGY])
+    let value = this.work(this.transfer, this.getTarget('dest'), [RESOURCE_ENERGY])
     if (value !== ERR_NOT_IN_RANGE) {
         this.clearTarget('dest')
     }
