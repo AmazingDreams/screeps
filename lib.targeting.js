@@ -8,10 +8,10 @@ class Targeting {
         let result = null
         let most = 0
         _.each(energies, e => {
-            if(e.amount && e.amount >= most && Finder.creepsWithTarget('source', e).length <= 0) {
+            if(e.amount && e.amount >= most && Finder.findCreepsWithTarget('source', e).length <= 0) {
                 result = e
                 most = e.amount
-            } else if(e.store && e.store[RESOURCE_ENERGY] >= most){ //  && Finder.creepsWithTarget('source', e).length <= 0) {
+            } else if(e.store && e.store[RESOURCE_ENERGY] >= most) {
                 result = e
                 most = e.store[RESOURCE_ENERGY]
             }
