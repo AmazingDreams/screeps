@@ -3,11 +3,11 @@
 const Finder = require('lib.finder')
 
 Creep.prototype.minerTick = function () {
-    if (!this.hasTarget()) {
+    if (!this.hasTarget('source')) {
         this.findMinerTarget()
     }
 
-    const target = this.getTarget()
+    const target = this.getTarget('source')
     if (target) {
         this.work(this.harvest, target, 1)
     } else {
@@ -16,5 +16,5 @@ Creep.prototype.minerTick = function () {
 }
 Creep.prototype.findMinerTarget = function () {
     const source = Finder.findUnoccupiedSource(this.room)
-    this.setTarget(source)
+    this.setTarget('source', source)
 }
