@@ -1,5 +1,6 @@
 'use strict';
 
+const Finder = require('lib.finder')
 const Targeting = require('lib.targeting')
 
 Creep.prototype.haulerTick = function () {
