@@ -16,7 +16,6 @@ class Targeting {
                 most = e.store[RESOURCE_ENERGY]
             }
         })
-        console.log(result)
         return result
     }
 }
