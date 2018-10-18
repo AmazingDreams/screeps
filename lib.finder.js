@@ -6,6 +6,10 @@ class Finder {
             return spawn.room.name === room.name && !spawn.isSpawning && spawn.isActive()
         }));
     }
+
+    static findUnoccupiedSource(room) {
+        return _.first(room.find(FIND_SOURCES))
+    }
 }
 
 module.exports = Finder
