@@ -3,10 +3,10 @@
 const Finder = require('lib.finder')
 
 Room.prototype.tick = function () {
-    if (this.needHaulers()) {
-        Finder.findIdleSpawner(this).spawnHauler()
-    } else if (this.needMiners()) {
+    if (this.needMiners()) {
         Finder.findIdleSpawner(this).spawnMiner()
+    } else if (this.needHaulers()) {
+        Finder.findIdleSpawner(this).spawnHauler()
     }
 }
 Room.prototype.needMiners = function () {
