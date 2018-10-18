@@ -24,5 +24,5 @@ Creep.prototype.getTarget = function (key) {
     return Game.getObjectById(this.memory['target- ' + key])
 }
 Creep.prototype.setTarget = function (key, target) {
-    this.memory['target- ' + key] = target
+    this.memory['target- ' + key] = target.id
 }
