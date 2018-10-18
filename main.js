@@ -1,8 +1,8 @@
 'use strict';
 
-require('Room');
-require('Structure/StructureSpawn')
-require('lib/Finder')
+require('lib.finder')
+require('room');
+require('structure.spawn')
 
 module.exports.loop = function () {
     _.forEach(Game.rooms, function (r) {

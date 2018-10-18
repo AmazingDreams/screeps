@@ -1,3 +1,5 @@
+'use strict';
+
 StructureSpawn.prototype.spawnACreep = function(task, body) {
     const name = task + '-' + Math.random().toString(36).substring(7);
     const memory = {
