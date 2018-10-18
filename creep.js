@@ -12,6 +12,14 @@ Creep.prototype.tick = function () {
             break;
     }
 }
+Creep.prototype.moveAndWork = function (method, target, options) {
+    if (!target) return false
+    let value = method.apply(this, _.flatten([target, options]))
+    if (value === ERR_NOT_IN_RANGE) {
+        this.moveTo(target, {maxRooms: 1})
+    }
+    return value
+}
 Creep.prototype.hasTarget = function (key) {
     const target = this.memory['target- ' + key]
     if (!target)
