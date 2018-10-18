@@ -12,6 +12,9 @@ class Finder {
         }));
     }
 
+    static countMyCreepsByTask(room, task) {
+        return findMyCreepsByTask(room, task).length
+    }
     static findMyCreepsByTask(room, task) {
         return _.filter(room.find(FIND_MY_CREEPS), function (c) {
             return c.task() === task

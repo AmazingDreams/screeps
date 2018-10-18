@@ -9,9 +9,9 @@ Room.prototype.tick = function () {
         Finder.findIdleSpawner(this).spawnMiner()
     }
 }
-Room.prototype.needMiners = function () {
-    return Finder.findMyCreepsByTask(this, 'miner').length < this.find(FIND_SOURCES).length
-}
 Room.prototype.needHaulers = function () {
-    return Finder.findMyCreepsByTask(this, 'hauler').length <= Finder.findMyCreepsByTask(this, 'miner')
+    return Finder.countMyCreepsByTask(this, 'hauler') < Finder.countMyCreepsByTask(this, 'miner')
+}
+Room.prototype.needMiners = function () {
+    return Finder.countMyCreepsByTask(this, 'miner') < this.find(FIND_SOURCES).length
 }
