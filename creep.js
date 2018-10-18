@@ -7,7 +7,9 @@ Creep.prototype.task = function () {
 }
 Creep.prototype.tick = function () {
     switch (this.task()) {
-        case 'miner': this.minerTick() break
+        case 'miner':
+            this.minerTick();
+            break;
     }
 }
 Creep.prototype.hasTarget = function (key) {
